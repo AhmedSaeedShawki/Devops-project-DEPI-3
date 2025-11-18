@@ -1,0 +1,130 @@
+/* 🌐 تنسيق عام للصفحة */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #f8f9fa, #e3f2fd);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+/* 🧩 حاوية التطبيق */
+.app {
+  background: white;
+  width: 70%; /* ✅ جعل الصفحة أوسع */
+  max-width: 900px;
+  margin-top: 60px;
+  padding: 40px; /* ✅ زيادة المسافات الداخلية */
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* 🗂️ تنسيق الكارد */
+.card {
+  margin: 40px 0;
+}
+
+.card input {
+  width: 80%;
+  padding: 14px; /* ✅ مساحة داخلية أكبر */
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 16px; /* ✅ مساحة أكبر تحت الحقل */
+  font-size: 16px;
+}
+
+.card button {
+  margin: 10px; /* ✅ مسافة مريحة بين الأزرار */
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #2196f3;
+  color: white;
+  font-size: 15px;
+  transition: background 0.3s ease;
+}
+
+.card button:hover {
+  background-color: #1976d2;
+}
+
+/* 📊 قسم الإحصائيات */
+.metrics {
+  background: #f5f5f5;
+  padding: 25px;
+  border-radius: 12px;
+  margin-top: 40px;
+}
+
+.metrics h2 {
+  margin-bottom: 20px;
+}
+
+/* 🌀 رسالة التحميل */
+.loading {
+  color: #666;
+  font-size: 15px;
+}
+
+/* ✨ تأثير الظهور */
+.fade-in {
+  animation: fade 0.5s ease-in;
+}
+
+#result_div {
+  width: 100%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#res_div {
+
+border-radius: 5px;
+border: 1px solid #ccc;
+width: 80%;
+padding-left: 14px;
+padding-right: 14px;
+
+}
+
+
+
+#copy_btn{
+ padding: 12px 20px;
+  
+}
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* 📢 Toast Notification */
+.toast {
+  position: fixed;
+  bottom: 40px; /* ✅ إبعاد الرسالة عن العناصر */
+  right: 40px; /* ✅ مسافة مريحة من الجانب */
+  background: #4caf50;
+  color: white;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-size: 15px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+  z-index: 9999;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}

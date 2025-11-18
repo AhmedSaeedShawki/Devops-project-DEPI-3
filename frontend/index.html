@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>URL Shortener Dashboard</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="./app-config.js"></script>
+  <script src="./script.js"></script>
+</head>
+<body>
+  <div class="app">
+    <h1>🔗 URL Shortener Dashboard</h1>
+
+    <div class="card">
+      <div id="input_div">
+        <input type="text" id="longUrl" placeholder="Enter a long URL..." />
+        <button onclick="pasteUrl()">📋 Paste</button>
+      </div>
+      <br>
+      <button id="shorten_btn" onclick="shortenUrl()">Shorten URL</button>
+
+      <div id="result_div" style="display:none;">
+        <div id="res_div">
+          <p id="loading" class="loading" style="display:none;">Shortening your link...</p>
+          <p id="shortUrl" class="fade-in" style="display:none;">
+            Short URL: <a href="#" id="shortLink" target="_blank"></a>
+          </p>
+        </div>
+        <button id="copy_btn" onclick="copyUrl()">📎 Copy</button>
+      </div>
+    </div>
+
+    <div class="metrics">
+      <h2>📊 Metrics Overview</h2>
+      <p>URLs Shortened: <span id="shortened">0</span></p>
+      <p>Redirects: <span id="redirects">0</span></p>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+</body>
+</html>
