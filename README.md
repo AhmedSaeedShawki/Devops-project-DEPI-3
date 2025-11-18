@@ -1,6 +1,6 @@
 # Devops-project-DEPI-3
 
-# ✅ *README.md (Ready to Copy & Paste)*
+
 
 # 🚀 URL Shortener – Full Deployment with Docker Compose
 
